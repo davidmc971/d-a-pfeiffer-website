@@ -19,8 +19,11 @@ import {
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { useGlobalState, ViewPortSize } from "../State/GlobalStateProvider";
 
 function Intro() {
+  const viewPortSize = useGlobalState().state.viewPortSize;
+
   return (
     <div id="intro" className="view">
       <div id="mask">
@@ -35,10 +38,30 @@ function Intro() {
           <Container>
             <Stack spacing={2} alignItems="center">
               <Avatar src={profileImg} sx={{ width: 128, height: 128 }} />
-              <Typography variant="h3" textAlign="center">
+              <Typography
+                variant={
+                  viewPortSize === ViewPortSize.Mobile
+                    ? "h5"
+                    : viewPortSize === ViewPortSize.Tablet
+                    ? "h4"
+                    : "h3"
+                }
+                fontWeight={500}
+                textAlign="center"
+              >
                 David Alexander Pfeiffer
               </Typography>
-              <Typography variant="h6" textAlign="center">
+              <Typography
+                variant={
+                  viewPortSize === ViewPortSize.Mobile
+                    ? "h6"
+                    : viewPortSize === ViewPortSize.Tablet
+                    ? "h5"
+                    : "h4"
+                }
+                fontWeight={400}
+                textAlign="center"
+              >
                 Freelance Software Developer and Computer Science Student
               </Typography>
               <ButtonGroup>

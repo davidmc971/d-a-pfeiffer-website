@@ -1,22 +1,69 @@
-import { AppBar, Button, IconButton, Toolbar, Typography } from "@mui/material";
-import { Box, CSSProperties, styled, useTheme } from "@mui/system";
-import React from "react";
+import {
+  AppBar,
+  Button,
+  Drawer,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import React, { useState } from "react";
 import Scroll from "react-scroll";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useGlobalState, ViewPortSize } from "../State/GlobalStateProvider";
+
+const ScrollButton = ({
+  text,
+  scrollTo,
+}: {
+  text: string;
+  scrollTo: string;
+}) => (
+  <Button variant="text" color="inherit" onClick={() => smoothScroll(scrollTo)}>
+    {text}
+  </Button>
+);
+
+const NavButtons = () => (
+  <>
+    <ScrollButton scrollTo="about" text="About" />
+    <ScrollButton scrollTo="portfolio" text="Portfolio" />
+  </>
+);
 
 function Navigation() {
+  const mobileView = useGlobalState().state.viewPortSize === ViewPortSize.Mobile;
+
+  const [drawer, setDrawer] = useState(false);
+
   return (
     <AppBar position="sticky" color="secondary">
       <Toolbar variant="dense">
-        <IconButton
-          size="medium"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
+        {mobileView ? (
+          <>
+            <IconButton
+              size="medium"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+              onClick={() => setDrawer(!drawer)}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              variant="temporary"
+              open={drawer}
+              onClose={() => setDrawer(false)}
+              onClick={() => setDrawer(false)}
+            >
+              <Toolbar />
+              <NavButtons />
+            </Drawer>
+          </>
+        ) : (
+          ""
+        )}
+
         <Typography
           sx={{ cursor: "pointer" }}
           variant="body1"
@@ -25,12 +72,7 @@ function Navigation() {
           David Alexander Pfeiffer
         </Typography>
         <div style={{ flexGrow: 1 }} />
-        <Button variant="text" onClick={() => smoothScroll("about")}>
-          About
-        </Button>
-        <Button variant="text" onClick={() => smoothScroll("portfolio")}>
-          Portfolio
-        </Button>
+        {!mobileView ? <NavButtons /> : ""}
       </Toolbar>
     </AppBar>
   );
