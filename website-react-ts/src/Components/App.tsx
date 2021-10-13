@@ -8,7 +8,6 @@ import Footer from "./Footer";
 import Intro from "./Intro";
 import Navigation from "./Navigation";
 import Portfolio from "./Portfolio";
-import ResponsiveBox from "./ResponsiveBox";
 import Services from "./Services";
 
 function App() {

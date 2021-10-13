@@ -1,6 +1,5 @@
 import React from "react";
-import { Typography, Paper, Divider } from "@mui/material";
-import ResponsiveBox from "./ResponsiveBox";
+import { Typography, Paper, Divider, Container } from "@mui/material";
 
 type InfoPaperProps = {
   title: string;
@@ -9,7 +8,7 @@ type InfoPaperProps = {
 
 function InfoPaper(props: React.PropsWithChildren<InfoPaperProps>) {
   return (
-    <ResponsiveBox>
+    <Container>
       <div id={props.id} />
       <Paper sx={{ marginY: 2 }}>
         <Typography variant="h5" sx={{ padding: 2 }}>
@@ -20,7 +19,7 @@ function InfoPaper(props: React.PropsWithChildren<InfoPaperProps>) {
           {props.children}
         </Typography>
       </Paper>
-    </ResponsiveBox>
+    </Container>
   );
 }
 
