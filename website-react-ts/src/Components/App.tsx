@@ -4,6 +4,7 @@ import React from "react";
 import { GlobalStateProvider } from "../State/GlobalStateProvider";
 import About from "./About";
 import "./App.css";
+import Footer from "./Footer";
 import Intro from "./Intro";
 import Navigation from "./Navigation";
 import Portfolio from "./Portfolio";
@@ -58,7 +59,9 @@ function App() {
               <Portfolio />
             </ResponsiveBox>
           </main>
-          <footer>{/* TODO: Imprint */}</footer>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       </ThemeProvider>
     </GlobalStateProvider>
