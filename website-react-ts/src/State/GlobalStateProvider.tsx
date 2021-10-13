@@ -49,7 +49,7 @@ const GlobalStateProvider = ({
     return () => {
       window.removeEventListener("resize", () => setResponsiveness());
     };
-  }, []);
+  }, [state.viewPortSize]);
 
   return (
     <GlobalStateContext.Provider value={{ state, setState }}>
