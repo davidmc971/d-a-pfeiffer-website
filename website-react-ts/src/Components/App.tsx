@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@mui/material";
+import { ThemeProvider, Toolbar } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import React from "react";
 import { GlobalStateProvider } from "../State/GlobalStateProvider";

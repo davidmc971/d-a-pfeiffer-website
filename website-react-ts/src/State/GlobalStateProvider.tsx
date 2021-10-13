@@ -38,7 +38,7 @@ const GlobalStateProvider = ({
         viewPortSize:
           window.innerWidth < 600
             ? ViewPortSize.Mobile
-            : window.innerWidth < 900
+            : window.innerWidth <= 1024
             ? ViewPortSize.Tablet
             : ViewPortSize.Desktop,
       }));

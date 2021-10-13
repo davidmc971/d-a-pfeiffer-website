@@ -31,50 +31,53 @@ const NavButtons = () => (
 );
 
 function Navigation() {
-  const mobileView = useGlobalState().state.viewPortSize === ViewPortSize.Mobile;
+  const mobileView =
+    useGlobalState().state.viewPortSize === ViewPortSize.Mobile;
 
   const [drawer, setDrawer] = useState(false);
 
   return (
-    <AppBar position="sticky" color="secondary">
-      <Toolbar variant="dense">
-        {mobileView ? (
-          <>
-            <IconButton
-              size="medium"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-              onClick={() => setDrawer(!drawer)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Drawer
-              variant="temporary"
-              open={drawer}
-              onClose={() => setDrawer(false)}
-              onClick={() => setDrawer(false)}
-            >
-              <Toolbar />
-              <NavButtons />
-            </Drawer>
-          </>
-        ) : (
-          ""
-        )}
+    <>
+      <AppBar position="sticky" color="secondary">
+        <Toolbar variant="dense">
+          {mobileView ? (
+            <>
+              <IconButton
+                size="medium"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+                onClick={() => setDrawer(!drawer)}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Drawer
+                variant="temporary"
+                open={drawer}
+                onClose={() => setDrawer(false)}
+                onClick={() => setDrawer(false)}
+              >
+                <Toolbar />
+                <NavButtons />
+              </Drawer>
+            </>
+          ) : (
+            ""
+          )}
 
-        <Typography
-          sx={{ cursor: "pointer" }}
-          variant="body1"
-          onClick={() => smoothScroll("top")}
-        >
-          David Alexander Pfeiffer
-        </Typography>
-        <div style={{ flexGrow: 1 }} />
-        {!mobileView ? <NavButtons /> : ""}
-      </Toolbar>
-    </AppBar>
+          <Typography
+            sx={{ cursor: "pointer" }}
+            variant="body1"
+            onClick={() => smoothScroll("top")}
+          >
+            David Alexander Pfeiffer
+          </Typography>
+          <div style={{ flexGrow: 1 }} />
+          {!mobileView ? <NavButtons /> : ""}
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }
 

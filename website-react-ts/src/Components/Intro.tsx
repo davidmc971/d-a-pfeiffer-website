@@ -25,14 +25,17 @@ function Intro() {
   const viewPortSize = useGlobalState().state.viewPortSize;
 
   return (
-    <div id="intro" className="view">
+    <div id="bg-img">
       <div id="mask">
         <Box
+          component="div"
+          className="intro"
           sx={{
             display: "flex",
             height: "100%",
             alignItems: "center",
             justifyContent: "center",
+            paddingTop: "32px",
           }}
         >
           <Container>

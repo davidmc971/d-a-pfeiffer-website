@@ -1,7 +1,13 @@
-#intro {
+.intro {
   height: 100%;
-  background: url("../Assets/bg.jpg")
-    no-repeat center center fixed;
+}
+
+#bg-img {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../Assets/bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,11 +15,7 @@
 }
 
 #mask {
-  background-color: rgba(0,0,0,0.6);
-  height: 100%;
-}
-
-#intro-container {
-  padding-top: 80px;
+  position: static;
+  background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
 }
