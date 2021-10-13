@@ -1,18 +1,26 @@
-import { Grid, Link, Paper } from "@mui/material";
+import { Container, Divider, Grid, Link, Paper, Toolbar } from "@mui/material";
 import React from "react";
 
 function Footer() {
   return (
-    <Paper sx={{ padding: 2, borderRadius: 0 }}>
-      <Grid container>
-        <Grid item xs={2}>
-          Copyright 2021
+    <>
+      <Divider />
+      <Toolbar>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          <Grid item xs="auto" alignContent="center">
+            Copyright 2021
+          </Grid>
+          <Grid item xs="auto">
+            <Link color="inherit" sx={{ cursor: "pointer" }}>Imprint</Link>
+          </Grid>
         </Grid>
-        <Grid item xs={2}>
-          <Link color="inherit">Imprint</Link>
-        </Grid>
-      </Grid>
-    </Paper>
+      </Toolbar>
+    </>
   );
 }
 

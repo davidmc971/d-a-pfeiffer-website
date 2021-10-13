@@ -26,6 +26,7 @@ const ScrollButton = ({
 const NavButtons = () => (
   <>
     <ScrollButton scrollTo="about" text="About" />
+    <ScrollButton scrollTo="services" text="Services" />
     <ScrollButton scrollTo="portfolio" text="Portfolio" />
   </>
 );

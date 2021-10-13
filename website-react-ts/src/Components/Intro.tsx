@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Avatar,
-  ButtonGroup,
   Container,
   IconButton,
   Stack,
@@ -20,6 +18,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useGlobalState, ViewPortSize } from "../State/GlobalStateProvider";
+import FontAwesomeSvgIcon from "../Utilities/FontAwesomeSvgIcon";
 
 function Intro() {
   const viewPortSize = useGlobalState().state.viewPortSize;
@@ -67,19 +66,19 @@ function Intro() {
               >
                 Freelance Software Developer and Computer Science Student
               </Typography>
-              <ButtonGroup>
+              <Box color="inherit" display="inline">
                 <Tooltip title="GitHub">
                   <IconButton
                     onClick={() => window.open("https://github.com/davidmc971")}
                   >
-                    <FontAwesomeIcon icon={faGithub} />
+                    <FontAwesomeSvgIcon icon={faGithub} />
                   </IconButton>
                 </Tooltip>
                 <Tooltip title="GitLab">
                   <IconButton
                     onClick={() => window.open("https://gitlab.com/davidmc971")}
                   >
-                    <FontAwesomeIcon icon={faGitlab} />
+                    <FontAwesomeSvgIcon icon={faGitlab} />
                   </IconButton>
                 </Tooltip>
                 <Tooltip title="LinkedIn">
@@ -90,14 +89,14 @@ function Intro() {
                       )
                     }
                   >
-                    <FontAwesomeIcon icon={faLinkedin} />
+                    <FontAwesomeSvgIcon icon={faLinkedin} />
                   </IconButton>
                 </Tooltip>
                 <Tooltip title="Discord Server">
                   <IconButton
                     onClick={() => window.open("https://discord.gg/RcTfXBkn2g")}
                   >
-                    <FontAwesomeIcon icon={faDiscord} />
+                    <FontAwesomeSvgIcon icon={faDiscord} />
                   </IconButton>
                 </Tooltip>
                 <Tooltip title="david.pfeiffer971@gmail.com">
@@ -106,10 +105,10 @@ function Intro() {
                       window.open("mailto:david.pfeiffer971@gmail.com")
                     }
                   >
-                    <FontAwesomeIcon icon={faEnvelope} />
+                    <FontAwesomeSvgIcon icon={faEnvelope} />
                   </IconButton>
                 </Tooltip>
-              </ButtonGroup>
+              </Box>
             </Stack>
           </Container>
         </Box>

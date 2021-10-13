@@ -1,17 +1,19 @@
 import React from "react";
-import { LoremIpsum } from "react-lorem-ipsum";
+import InfoPaper from "./InfoPaper";
 
 function About() {
   return (
-    <div id="about">
-      <p>This is the About section</p>
+    <InfoPaper title={"About me"} id="about">
+      <p>Welcome to my website! My name is David Alexander Pfeiffer.</p>
+      <p>I am from Aachen, Germany and am 23 years old.</p>
       <p>
-        Hello there. I am David Alexander Pfeiffer.
-        <br />I am working as a self-employed freelancer in my business "David
+        I am working as a self-employed freelancer in my business "David
         Alexander Pfeiffer Software & IT", which I started in September 2021.
+        <br />
+        Apart from that I am studying for my bachelor's degree in Computer
+        Science at RWTH Aachen University.
       </p>
-      <LoremIpsum avgSentencesPerParagraph={42} />
-    </div>
+    </InfoPaper>
   );
 }
 

@@ -2,12 +2,12 @@ import React from "react";
 import InfoPaper from "./InfoPaper";
 import LoremIpsum from "react-lorem-ipsum";
 
-function Portfolio() {
+function Services() {
   return (
-    <InfoPaper title={"My Portfolio"} id="portfolio">
+    <InfoPaper title={"Services I provide"} id="services">
       <LoremIpsum />
     </InfoPaper>
   );
 }
 
-export default Portfolio;
+export default Services;

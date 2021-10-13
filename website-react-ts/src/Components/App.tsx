@@ -1,4 +1,4 @@
-import { ThemeProvider, Toolbar } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import React from "react";
 import { GlobalStateProvider } from "../State/GlobalStateProvider";
@@ -9,6 +9,7 @@ import Intro from "./Intro";
 import Navigation from "./Navigation";
 import Portfolio from "./Portfolio";
 import ResponsiveBox from "./ResponsiveBox";
+import Services from "./Services";
 
 function App() {
   return (
@@ -16,21 +17,23 @@ function App() {
       <ThemeProvider
         theme={createTheme({
           palette: {
-            primary: {
-              light: "#ffffff",
-              main: "#eceff1",
-              dark: "#babdbe",
-              contrastText: "#000000",
-            },
-            secondary: {
-              light: "#62717b",
-              main: "#37464f",
-              dark: "#101f27",
-              contrastText: "#ffffff",
-            },
+            mode: "dark",
+            // primary: {
+            //   light: "#ffffff",
+            //   main: "#eceff1",
+            //   dark: "#babdbe",
+            //   contrastText: "#000000",
+            // },
+            // secondary: {
+            //   light: "#62717b",
+            //   main: "#37464f",
+            //   dark: "#101f27",
+            //   contrastText: "#ffffff",
+            // },
           },
         })}
       >
+        <CssBaseline />
         <div className="App">
           <div id="top" />
           <header
@@ -52,12 +55,9 @@ function App() {
             </div>
           </header>
           <main>
-            <ResponsiveBox>
-              <About />
-            </ResponsiveBox>
-            <ResponsiveBox>
-              <Portfolio />
-            </ResponsiveBox>
+            <About />
+            <Services />
+            <Portfolio />
           </main>
           <footer>
             <Footer />
