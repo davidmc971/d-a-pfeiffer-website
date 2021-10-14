@@ -4,7 +4,7 @@ import LoremIpsum from "react-lorem-ipsum";
 
 function Portfolio() {
   return (
-    <InfoPaper title={"My Portfolio"} id="portfolio">
+    <InfoPaper title="Portfolio" subtitle="Projects I worked on." id="portfolio">
       <p>Coming soon!</p>
       <LoremIpsum />
     </InfoPaper>

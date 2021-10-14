@@ -3,7 +3,7 @@ import InfoPaper from "./InfoPaper";
 
 function About() {
   return (
-    <InfoPaper title={"About me"} id="about">
+    <InfoPaper title="About" subtitle="Who am I?" id="about">
       <p>Welcome to my website! My name is David Alexander Pfeiffer.</p>
       <p>I am from Aachen, Germany and am 23 years old.</p>
       <p>
