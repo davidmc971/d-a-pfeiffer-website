@@ -1,0 +1,9 @@
+header.appHeader {
+  height: 100%;
+}
+
+.App {
+  margin: 0;
+  height: 100%;
+  background-color: transparent;
+}
