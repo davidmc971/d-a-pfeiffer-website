@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/display-name */
+
 import { SvgIcon } from "@mui/material";
 import React from "react";
 
