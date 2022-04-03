@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Paper, Divider, Container } from "@mui/material";
+import { Typography, Paper, Divider, Container, Box } from "@mui/material";
 
 type InfoPaperProps = {
   title: string;
@@ -15,9 +15,9 @@ function InfoPaper(props: React.PropsWithChildren<InfoPaperProps>) {
           {props.title}
         </Typography>
         <Divider />
-        <Typography variant="body1" sx={{ paddingX: 2, paddingBottom: 1 }}>
+        <Box component="div" sx={{ paddingX: 2, paddingBottom: 1 }}>
           {props.children}
-        </Typography>
+        </Box>
       </Paper>
     </Container>
   );

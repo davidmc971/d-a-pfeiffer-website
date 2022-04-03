@@ -28,7 +28,7 @@ function Intro() {
       <div className={styles.mask}>
         <Box
           component="div"
-          className="intro"
+          className={styles.intro}
           sx={{
             display: "flex",
             height: "100%",

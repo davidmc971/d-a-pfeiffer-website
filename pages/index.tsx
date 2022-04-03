@@ -5,7 +5,7 @@ import App from '../components/App'
 
 const Home: NextPage = () => {
   return (
-    <>
+    <div id='root'>
       <Head>
         <title>David Alexander Pfeiffer</title>
         <meta name="description" content="Information about David Alexander Pfeiffer" />
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <App />
-    </>
+    </div>
   )
 }
 
