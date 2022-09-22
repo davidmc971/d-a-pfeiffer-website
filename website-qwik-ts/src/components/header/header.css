@@ -1,37 +1,20 @@
-header {
-  background: var(--qwik-purple);
-}
-header {
-  display: flex;
-  background: white;
-  border-bottom: 10px solid var(--qwik-dark-purple);
-}
-
-header .logo a {
-  display: inline-block;
-  padding: 10px 10px 7px 20px;
+#header {
+    display: flex;
+    align-items: center;
+    min-height: 2rem;
+    padding: .5rem 1rem;
+    @apply bg-zinc-800 text-zinc-100;
 }
 
-header ul {
-  margin: 0;
-  padding: 3px 10px 0 0;
-  list-style: none;
-  flex: 1;
-  text-align: right;
+#header > ul {
+    list-style: none;
 }
 
-header li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
+#header > ul > li {
+    display: inline-block;
+    padding-inline-start: 1rem;
 }
 
-header li a {
-  display: inline-block;
-  padding: 15px 10px;
-  text-decoration: none;
-}
-
-header li a:hover {
-  text-decoration: underline;
+#header > .lead {
+    flex-grow: 1;
 }
