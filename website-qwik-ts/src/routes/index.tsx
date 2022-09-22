@@ -21,7 +21,7 @@ export default component$(() => {
         </li>
       </ul>
 
-      <h2>Commands</h2>
+      <h2 class="font-bold underline">Commands</h2>
 
       <table class="commands">
         <tr>
