@@ -14,5 +14,6 @@ body {
   background-color: #fafafa;
   font-family: "Poppins", ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, sans-serif;
-    min-height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
