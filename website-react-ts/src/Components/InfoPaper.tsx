@@ -27,7 +27,7 @@ function InfoPaper(props: React.PropsWithChildren<InfoPaperProps>) {
           </Typography>
         </Grid>
         <Divider />
-        <Typography variant="body1" sx={{ paddingX: 2, paddingBottom: 1 }}>
+        <Typography component="div" variant="body1" sx={{ paddingX: 2, paddingBottom: 1 }}>
           {props.children}
         </Typography>
       </Paper>
