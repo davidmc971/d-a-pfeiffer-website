@@ -11,18 +11,18 @@ const Imprint = `<div class="impressum">
   </p>
   <p>
     <strong>Kontakt:</strong> <br />
-    Telefon: %2B49-1735675204<br />
+    Telefon: +49 173 5675204<br />
     E-Mail:
     <a href="mailto:david.pfeiffer971@gmail.com">david.pfeiffer971@gmail.com</a
     ><br />
   </p>
-  <!-- <p>
+  ${"" /*<!-- <p>
     <strong>Umsatzsteuer-ID: </strong> <br />
     Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:
     201%2F5326%2F7005<br /><br />
     <strong>Wirtschafts-ID: </strong><br />
     <br />
-  </p> -->
+</p> -->*/}
   <p>
     <strong>Haftungsausschluss: </strong><br /><br /><strong
       >Haftung für Inhalte</strong
