@@ -63,7 +63,7 @@ function Intro() {
                 fontWeight={400}
                 textAlign="center"
               >
-                Freelance Software Developer and Computer Science Student
+                Developer | Instructor | Entrepreneur | CS Student
               </Typography>
               <Box color="inherit" display="inline">
                 <Tooltip title="GitHub">
