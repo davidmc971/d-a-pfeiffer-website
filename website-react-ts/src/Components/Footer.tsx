@@ -35,7 +35,7 @@ function Footer() {
               sx={{ cursor: "pointer" }}
               onClick={() => setModalOpen(!modalOpen)}
             >
-              Imprint (coming soon)
+              Imprint
             </Link>
             <Dialog
               open={modalOpen}
@@ -43,7 +43,7 @@ function Footer() {
               fullWidth={true}
               maxWidth="md"
             >
-              <DialogTitle>
+              <DialogTitle component="div">
                 <h2 style={{ margin: 0 }}>Impressum</h2>
               </DialogTitle>
               <Divider />
