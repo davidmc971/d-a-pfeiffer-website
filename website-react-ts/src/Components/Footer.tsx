@@ -27,7 +27,7 @@ function Footer() {
           alignItems="center"
         >
           <Grid item xs="auto" alignContent="center">
-            Copyright 2021
+            &copy; {new Date().getFullYear()}
           </Grid>
           <Grid item xs="auto">
             <Link
