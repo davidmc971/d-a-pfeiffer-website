@@ -1,13 +1,12 @@
 import {
   Avatar,
+  Box,
   Container,
   IconButton,
   Stack,
   Tooltip,
   Typography,
 } from "@mui/material";
-import { Box } from "@mui/system";
-import React from "react";
 import profileImg from "../Assets/profile.jpg";
 import "./Intro.css";
 import {
