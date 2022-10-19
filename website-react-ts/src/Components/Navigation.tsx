@@ -7,7 +7,7 @@ import {
   Typography,
   useScrollTrigger,
 } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import Scroll from "react-scroll";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useGlobalState, ViewPortSize } from "../State/GlobalStateProvider";

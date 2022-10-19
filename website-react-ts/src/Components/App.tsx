@@ -1,6 +1,5 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
-import React from "react";
 import { GlobalStateProvider } from "../State/GlobalStateProvider";
 import About from "./About";
 import "./App.css";

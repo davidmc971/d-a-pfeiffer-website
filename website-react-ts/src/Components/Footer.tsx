@@ -10,8 +10,7 @@ import {
   Toolbar,
   Button as MUIButton,
 } from "@mui/material";
-import React, { useState } from "react";
-import { Button } from "react-scroll";
+import { useState } from "react";
 import Imprint from "../Assets/Imprint";
 
 function Footer() {
