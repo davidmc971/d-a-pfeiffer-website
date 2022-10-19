@@ -1,8 +1,22 @@
-import { Dialog, DialogActions, DialogContent, DialogTitle, Grid, Link, Paper, Toolbar, Typography } from "@mui/material";
+import {
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Divider,
+  Grid,
+  Link,
+  Paper,
+  Toolbar,
+  Button as MUIButton,
+} from "@mui/material";
 import React, { useState } from "react";
+import { Button } from "react-scroll";
+import Imprint from "../Assets/Imprint";
 
 function Footer() {
   const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <Paper sx={{ borderRadius: 0 }}>
       <Toolbar variant="dense">
@@ -28,10 +42,19 @@ function Footer() {
               onClose={() => setModalOpen(false)}
               fullWidth={true}
               maxWidth="md"
-              >
-              <DialogTitle>Imprint</DialogTitle>
-              <DialogContent></DialogContent>
-              <DialogActions></DialogActions>
+            >
+              <DialogTitle>
+                <h2 style={{ margin: 0 }}>Impressum</h2>
+              </DialogTitle>
+              <Divider />
+              <DialogContent
+                sx={{ maxHeight: "60vh" }}
+                dangerouslySetInnerHTML={{ __html: Imprint }}
+              />
+              <Divider />
+              <DialogActions>
+                <MUIButton sx={{color: "white"}} onClick={() => setModalOpen(false)}>Close</MUIButton>
+              </DialogActions>
             </Dialog>
           </Grid>
         </Grid>
