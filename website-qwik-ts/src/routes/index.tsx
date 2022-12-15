@@ -1,14 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { Link } from "@builder.io/qwik-city";
+import Intro from "~/components/intro/intro";
 
 export default component$(() => {
   return (
-    <div>
-      <Link class="mindblow" href="/qwik">
-        Qwikie 🤯
-      </Link>
-    </div>
+    <>
+      <Intro />
+    </>
   );
 });
 
