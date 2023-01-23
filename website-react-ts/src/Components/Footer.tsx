@@ -1,4 +1,4 @@
-import { Dialog, DialogActions, DialogContent, DialogTitle, Grid, Link, Paper, Toolbar, Typography } from "@mui/material";
+import { Dialog, DialogActions, DialogContent, DialogTitle, Grid, Link, Paper, Toolbar } from "@mui/material";
 import React, { useState } from "react";
 
 function Footer() {

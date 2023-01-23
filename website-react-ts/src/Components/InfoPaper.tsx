@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography, Paper, Divider, Container, Grid } from "@mui/material";
-import { Box } from "@mui/system";
 
 type InfoPaperProps = {
   title: string;
