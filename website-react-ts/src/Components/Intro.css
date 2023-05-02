@@ -7,7 +7,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: url("../Assets/bg.jpg") no-repeat center center fixed;
+  background: url("../Assets/background.webp") no-repeat center center fixed, url("../Assets/bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
