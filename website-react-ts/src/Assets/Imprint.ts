@@ -13,16 +13,18 @@ const Imprint = `<div class="impressum">
     <strong>Kontakt:</strong> <br />
     Telefon: +49 173 5675204<br />
     E-Mail:
-    <a href="mailto:david.pfeiffer971@gmail.com">david.pfeiffer971@gmail.com</a
+    <a href="mailto:info@davidmc971.dev">info@davidmc971.dev</a
     ><br />
   </p>
-  ${"" /*<!-- <p>
+  ${
+    "" /*<!-- <p>
     <strong>Umsatzsteuer-ID: </strong> <br />
     Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:
     201%2F5326%2F7005<br /><br />
     <strong>Wirtschafts-ID: </strong><br />
     <br />
-</p> -->*/}
+</p> -->*/
+  }
   <p>
     <strong>Haftungsausschluss: </strong><br /><br /><strong
       >Haftung für Inhalte</strong
@@ -86,6 +88,6 @@ const Imprint = `<div class="impressum">
     >Kanzlei Hasselbach, Frankfurt</a
   >
 </div>
-`
+`;
 
 export default Imprint;

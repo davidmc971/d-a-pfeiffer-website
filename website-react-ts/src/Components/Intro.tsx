@@ -1,4 +1,11 @@
 import {
+  faDiscord,
+  faGithub,
+  faGitlab,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
   Avatar,
   Box,
   Container,
@@ -8,16 +15,10 @@ import {
   Typography,
 } from "@mui/material";
 import profileImg from "../Assets/profile.jpg";
-import "./Intro.css";
-import {
-  faLinkedin,
-  faGithub,
-  faGitlab,
-  faDiscord,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useGlobalState, ViewPortSize } from "../State/GlobalStateProvider";
 import FontAwesomeSvgIcon from "../Utilities/FontAwesomeSvgIcon";
+import "./Intro.css";
+import CodebergSvg from "../Assets/codeberg-logo_icon_white.svg";
 
 function Intro() {
   const viewPortSize = useGlobalState().state.viewPortSize;
@@ -44,8 +45,8 @@ function Intro() {
                   viewPortSize === ViewPortSize.Mobile
                     ? "h5"
                     : viewPortSize === ViewPortSize.Tablet
-                    ? "h4"
-                    : "h3"
+                      ? "h4"
+                      : "h3"
                 }
                 fontWeight={500}
                 textAlign="center"
@@ -57,13 +58,13 @@ function Intro() {
                   viewPortSize === ViewPortSize.Mobile
                     ? "h6"
                     : viewPortSize === ViewPortSize.Tablet
-                    ? "h5"
-                    : "h4"
+                      ? "h5"
+                      : "h4"
                 }
                 fontWeight={400}
                 textAlign="center"
               >
-                Developer | Instructor | Entrepreneur | CS Student
+                Developer | Instructor | Entrepreneur | CS Geek
               </Typography>
               <Box color="inherit" display="inline">
                 <Tooltip title="GitHub">
@@ -71,6 +72,21 @@ function Intro() {
                     onClick={() => window.open("https://github.com/davidmc971")}
                   >
                     <FontAwesomeSvgIcon icon={faGithub} />
+                  </IconButton>
+                </Tooltip>
+                <Tooltip title="Codeberg">
+                  <IconButton
+                    onClick={() =>
+                      window.open("https://codeberg.org/davidmc971/")
+                    }
+                  >
+                    <img alt="Codeberg" src={CodebergSvg} style={{
+                      width: "1em",
+                      height: "1em",
+                      display: "inline-block",
+                      flexShrink: 0,
+                      fontSize: "1.5rem",
+                    }} />
                   </IconButton>
                 </Tooltip>
                 <Tooltip title="GitLab">
@@ -84,7 +100,7 @@ function Intro() {
                   <IconButton
                     onClick={() =>
                       window.open(
-                        "https://linkedin.com/in/david-alexander-pfeiffer/"
+                        "https://linkedin.com/in/david-alexander-pfeiffer/",
                       )
                     }
                   >
@@ -98,11 +114,9 @@ function Intro() {
                     <FontAwesomeSvgIcon icon={faDiscord} />
                   </IconButton>
                 </Tooltip>
-                <Tooltip title="david.pfeiffer971@gmail.com">
+                <Tooltip title="info@davidmc971.dev">
                   <IconButton
-                    onClick={() =>
-                      window.open("mailto:david.pfeiffer971@gmail.com")
-                    }
+                    onClick={() => window.open("mailto:info@davidmc971.dev")}
                   >
                     <FontAwesomeSvgIcon icon={faEnvelope} />
                   </IconButton>
